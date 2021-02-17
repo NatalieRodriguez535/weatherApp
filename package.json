@@ -4,7 +4,8 @@
   "description": "Weather App",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "netlify-lambda build express",
+    "start": "nodemon index.js"
   },
   "repository": {
     "type": "git",
@@ -23,5 +24,9 @@
     "express": "^4.17.1",
     "nodemon": "^2.0.6",
     "request": "^2.88.2"
+  },
+  "devDependencies": {
+    "netlify-lambda": "^2.0.3",
+    "serverless-http": "^2.7.0"
   }
 }

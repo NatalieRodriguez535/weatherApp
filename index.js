@@ -1,6 +1,7 @@
 const express = require("express")
 const app = express()
 const bodyParser = require("body-parser")
+const serverless =require("serverless-http");
 const request = require("request")
 const apiKey = "a7d7e738c84460b2a21d837ea7039b73"
 
@@ -51,3 +52,6 @@ const port = 3005
 app.listen(port, () =>{
     console.log(`I am using ${port}`)
 })
+
+module.exports = app;
+module.exports.handler = serverless(app);
